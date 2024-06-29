@@ -1,0 +1,20 @@
+.textG {
+  background: linear-gradient(
+    to right,
+    #fc72ff,
+    #8f68ff,
+    #487bff,
+    #8f68ff,
+    #fc72ff
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: anim-grad 2.5s linear infinite;
+}
+
+@keyframes anim-grad {
+  to {
+    background-position: 200%;
+  }
+}
