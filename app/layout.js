@@ -16,7 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${lato.className} select-none`}>{children}</body>
+      <body className={`${lato.className} sectionGra select-none`}>
+        {children}
+      </body>
     </html>
   );
 }

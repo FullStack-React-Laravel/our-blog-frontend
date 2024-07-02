@@ -1,6 +1,6 @@
 import XYAnim from "@/anim/xy-anim";
 import HeroImage from "./hero-image";
-import classes from "./hero.module.css";
+
 import Btn from "@/ui/Btn";
 
 export default function HeroSection() {
@@ -9,9 +9,7 @@ export default function HeroSection() {
       <HeroImage />
       <div className="relative max-w-6xl px-4 text-white">
         <XYAnim>
-          <h1
-            className={`mb-5 text-3xl font-[900] md:text-8xl ${classes.textG}`}
-          >
+          <h1 className={`textG mb-5 text-3xl font-[900] md:text-8xl`}>
             Welcome to our blog !!
           </h1>
         </XYAnim>
