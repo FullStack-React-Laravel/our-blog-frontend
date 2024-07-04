@@ -1,6 +1,6 @@
 export async function getBlogs() {
   const API_URL =
-    process.env.BLOG_API_URL || "https://our-blog-eg-api.vercel.app/posts";
+    process.env.BLOG_API_URL || "https://our-blog-eg-api.vercel.app/posts/latest";
 
   try {
     const response = await fetch(API_URL);
