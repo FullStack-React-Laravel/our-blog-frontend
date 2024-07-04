@@ -11,6 +11,9 @@ module.exports = {
       gridTemplateColumns: {
         card: "repeat(auto-fill, minmax(300px, 1fr))",
       },
+      transitionProperty: {
+        height: 'height'
+      }
     },
   },
   plugins: [],

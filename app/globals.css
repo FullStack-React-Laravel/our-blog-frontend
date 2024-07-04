@@ -77,6 +77,11 @@ html {
   background-repeat: no-repeat;
 }
 
+.hover\:sectionGra:hover {
+  background: linear-gradient(336deg, #000436, #010715);
+  background-repeat: no-repeat;
+}
+
 .rotate-anim {
   animation: anim-rotate 4s alternate-reverse infinite;
 }
