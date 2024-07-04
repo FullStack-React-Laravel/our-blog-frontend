@@ -14,7 +14,7 @@ export default async function BlogPage({ params: { slug } }) {
     return <Error height="min-h-screen" errorMessage={error} />;
   }
 
-  const singleBlog = blogs.find((b) => b.slug == slug);
+  const singleBlog = blogs.data.find((b) => b.slug == slug);
 
   if (!singleBlog)
     return (

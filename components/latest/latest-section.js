@@ -16,8 +16,8 @@ export default async function LatestSection() {
     return <Error height="min-h-screen" errorMessage={error} />;
   }
 
-  // 3 blogs in latest section
-  const blogsRender = blogs.slice(0, 3);
+  const blogsRender = blogs.data;
+
   return (
     <section id="latest" className="py-20">
       <div className="our-container">

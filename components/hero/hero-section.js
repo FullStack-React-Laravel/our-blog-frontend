@@ -9,8 +9,8 @@ export default function HeroSection() {
       <HeroImage />
       <div className="relative max-w-6xl px-4 text-white">
         <XYAnim>
-          <h1 className={`textG mb-5 text-3xl font-[900] md:text-8xl`}>
-            Welcome to our blog !!
+          <h1 className={`mb-5 text-3xl font-[900] md:text-8xl`}>
+            Welcome <span className="textG">to our blog!!</span>
           </h1>
         </XYAnim>
         <XYAnim
