@@ -142,7 +142,7 @@ function UserDropdown({onTop}) {
 				</div>
 			</button>
 
-			{createPortal(
+			{typeof window === "object" && createPortal(
 				<div
 					className={
 						"our-container fixed z-10 right-1/2 translate-x-1/2 overflow-hidden transition-height duration-500 " +
@@ -176,7 +176,7 @@ function UserDropdown({onTop}) {
 						</div>
 					</div>
 				</div>,
-				document.body
+				document.getElementById("header")
 			)}
 		</div>
 	);
