@@ -5,11 +5,11 @@ import Btn from "@/ui/Btn";
 
 export default function HeroSection() {
   return (
-    <section className="relative grid min-h-[500px] h-screen place-content-center">
+    <section className="relative grid h-screen min-h-[500px] place-content-center">
       <HeroImage />
       <div className="relative max-w-6xl px-4 text-white">
         <XYAnim>
-          <h1 className={`mb-5 text-3xl font-[900] md:text-8xl`}>
+          <h1 className={`mb-5 text-3xl font-bold md:text-8xl`}>
             Welcome <span className="textG">to our blog!!</span>
           </h1>
         </XYAnim>

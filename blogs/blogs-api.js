@@ -1,14 +1,27 @@
-export async function getBlogs() {
-  const API_URL =
-    process.env.BLOG_API_URL || "https://our-blog-eg-api.vercel.app/posts/latest";
+const API_URL_Blogs = "https://our-blog-eg-api.vercel.app/posts";
 
+export async function getBlogs() {
   try {
-    const response = await fetch(API_URL);
+    const response = await fetch(`${API_URL_Blogs}/latest`);
     if (!response.ok) {
-      throw new Error(`Can't fetching data`);
+      throw new Error(`Can't fetching Blogs`);
     }
     const blogs = await response.json();
     return blogs;
+  } catch (err) {
+    throw new Error(`${err.message}`);
+  }
+}
+
+export async function getBlog(slug) {
+  try {
+    const response = await fetch(`${API_URL_Blogs}/${slug}`);
+    if (!response.ok) {
+      throw new Error(`Can't fetching blog`);
+    }
+    const blog = await response.json();
+
+    return blog;
   } catch (err) {
     throw new Error(`${err.message}`);
   }
