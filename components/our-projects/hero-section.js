@@ -8,7 +8,7 @@ export default function HeroSection() {
 	const [mounted, setMounted] = useState(false);
 
 	useEffect(() => {
-		setTimeout(() => setMounted(true), 100);
+		setTimeout(() => setMounted(true), 500);
 	}, [mounted]);
 
 	return (
