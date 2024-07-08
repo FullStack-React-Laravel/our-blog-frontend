@@ -11,7 +11,7 @@ export default function NavItems({ showNavbar, screen }) {
     { link: "/our-projects", name: "our projects" },
   ];
 
-  if (screen == "mobile") {
+  if (screen === "mobile") {
     return (
       <nav
         className={`mt-2 block overflow-hidden rounded-lg transition-all duration-300 md:hidden ${showNavbar ? "h-48" : "h-0"}`}
@@ -21,9 +21,9 @@ export default function NavItems({ showNavbar, screen }) {
             <li key={name}>
               <Link
                 href={link}
-                className={`rounded-xl px-2 py-1 capitalize duration-500 ${pathname == link && "sectionGra"}`}
+                className={`rounded-xl px-2 py-1 capitalize duration-500 ${(pathname === link || (link !== "/" && pathname.startsWith(link))) && "sectionGra"}`}
               >
-                <span className={`font-bold ${pathname == link && "textG"}`}>
+                <span className={`font-bold ${(pathname === link || (link !== "/" && pathname.startsWith(link))) && "textG"}`}>
                   {name}
                 </span>
               </Link>
@@ -41,9 +41,9 @@ export default function NavItems({ showNavbar, screen }) {
           <li key={name}>
             <Link
               href={link}
-              className={`rounded-xl px-2 py-1 capitalize duration-500 ${pathname === link && "sectionGra"} `}
+              className={`rounded-xl px-2 py-1 capitalize duration-500 ${(pathname === link || (link !== "/" && pathname.startsWith(link))) && "sectionGra"} `}
             >
-              <span className={`font-bold ${pathname === link ? "textG" : ""}`}>
+              <span className={`font-bold ${(pathname === link || (link !== "/" && pathname.startsWith(link))) ? "textG" : ""}`}>
                 {name}
               </span>
             </Link>
