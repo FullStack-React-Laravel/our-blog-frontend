@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-export default function Tags({ tags }) {
-  const tagsRender = tags.slice(0, 3);
-  let moreTags;
+export default function Tags({ tags, renderAll = false }) {
+  const tagsRender = renderAll ? tags : tags.slice(0, 2);
+  let moreTags = null;
 
-  if (tags.length > 3)
+  if (tags.length > 2 && !renderAll)
     moreTags = (
       <span className="block rounded-lg bg-indigo-950/80 px-4 py-[2px] text-indigo-600">
-        +{tags.length - 3}
+        +{tags.length - 2}
       </span>
     );
 

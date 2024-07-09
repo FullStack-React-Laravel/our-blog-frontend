@@ -1,6 +1,6 @@
 import { getBlogs } from "@/blogs/blogs-api";
 import Error from "@/ui/error";
-import Card from "../blog-card/card";
+import Card from "../blogs/card";
 
 export default async function LatestSection() {
   let blogs;

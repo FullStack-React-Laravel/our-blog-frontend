@@ -25,7 +25,7 @@ const animVar = {
     const finalState = {
       opacity: 1,
       transition: {
-        duration: 0.9,
+        duration: 0.8,
         delay,
       },
     };

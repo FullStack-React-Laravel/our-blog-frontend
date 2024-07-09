@@ -13,8 +13,9 @@ export default function UserDropdown({ showUserAdmin }) {
           }
         >
           <div className="flex items-center border-b border-b-indigo-50/10 pb-3">
-            <div className="size-16 overflow-hidden rounded-full">
+            <div className="gradientAnim size-16 overflow-hidden rounded-full p-1">
               <Image
+                className="rounded-full"
                 src="https://i.pravatar.cc/150?img=2"
                 alt="user_avatar"
                 width={150}

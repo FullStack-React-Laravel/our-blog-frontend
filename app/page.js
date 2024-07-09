@@ -8,13 +8,11 @@ import { Suspense } from "react";
 export default function HomePage() {
   return (
     <>
-      <main>
-        <HeroSection />
-        <Suspense fallback={<Spinner height="min-h-screen" />}>
-          <LatestSection />
-        </Suspense>
-        <About />
-      </main>
+      <HeroSection />
+      <Suspense fallback={<Spinner height="min-h-screen" />}>
+        <LatestSection />
+      </Suspense>
+      <About />
     </>
   );
 }

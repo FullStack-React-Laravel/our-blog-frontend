@@ -5,7 +5,7 @@ import Btn from "@/ui/Btn";
 
 export default function HeroSection() {
   return (
-    <section className="relative grid h-screen min-h-[500px] place-content-center">
+    <section className="relative grid min-h-screen place-content-center">
       <HeroImage />
       <div className="relative max-w-6xl px-4 text-white">
         <XYAnim>

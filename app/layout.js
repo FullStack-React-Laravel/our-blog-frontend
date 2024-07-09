@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${lato.className} sectionGra select-none`}>
         <Header />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );

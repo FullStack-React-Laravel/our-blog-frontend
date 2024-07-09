@@ -1,8 +1,9 @@
 import { formatDate } from "@/helper/helper-function";
 import Image from "next/image";
-import BlogTags from "./tags";
+import Tags from "./tags";
 import Link from "next/link";
 import Btn from "@/ui/Btn";
+import CreatedBy from "./created-by";
 
 export default function Card({
   title,
@@ -36,7 +37,7 @@ export default function Card({
         </Link>
       </div>
       <div className="mt-4 flex flex-col gap-4">
-        <BlogTags tags={tags} />
+        <Tags tags={tags} />
         <Link
           href={`/blogs/${slug}`}
           className="flex h-14 items-center py-px text-xl text-gray-300"
@@ -45,26 +46,11 @@ export default function Card({
         </Link>
         <div className="line-2 text-justify text-gray-400">{excerpt}</div>
         <div className="flex items-center justify-between">
-          <UserCard {...user} createdAt={date} />
-
-          <Btn link={`/blogs/${slug}`}>Read More</Btn>
+          <CreatedBy {...user} createdAt={date} />
+          <Btn textSize="text-sm md:text-xl" link={`/blogs/${slug}`}>
+            Read More
+          </Btn>
         </div>
-      </div>
-    </div>
-  );
-}
-
-function UserCard({ name, username, avatar, createdAt }) {
-  return (
-    <div className="flex h-16 items-center gap-4">
-      <div className="gradientAnim h-10 w-10 overflow-hidden rounded-full">
-        <Image src={avatar} width={150} height={150} alt={avatar} priority />
-      </div>
-      <div className="text-sm text-white">
-        <Link href={`/user/${username}`} className="block font-bold">
-          {name}
-        </Link>
-        <time className="text-gray-400">{createdAt}</time>
       </div>
     </div>
   );

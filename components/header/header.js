@@ -51,9 +51,10 @@ export default function Header() {
               "sectionGra flex items-center justify-center rounded-full p-0.5 pr-2"
             }
           >
-            <div className="size-10 overflow-hidden rounded-full">
+            <div className="gradientAnim size-10 overflow-hidden rounded-full p-1">
               <Image
                 src="https://i.pravatar.cc/150?img=2"
+                className="rounded-full"
                 alt="user_avatar"
                 width={150}
                 height={150}
@@ -71,7 +72,11 @@ export default function Header() {
         </div>
         {/* className={`mt-2 grow overflow-hidden rounded-lg border-indigo-50/10 md:justify-self-start ${navButtonActive ? "h-48 border" : "h-0 md:h-auto"}`} */}
       </div>
-      <NavItems showNavbar={showNavbar} screen="mobile" />
+      <NavItems
+        onClick={handleShowNavbar}
+        showNavbar={showNavbar}
+        screen="mobile"
+      />
       <UserDropdown onTop={scrollY100} showUserAdmin={showUserAdmin} />
     </header>
   );

@@ -78,24 +78,6 @@ html {
   background-repeat: no-repeat;
 }
 
-.hover\:sectionGra:hover {
-  background: linear-gradient(336deg, #000436, #010715);
-  background-repeat: no-repeat;
-}
-
-.rotate-anim {
-  animation: anim-rotate 4s alternate-reverse infinite;
-}
-
-@keyframes anim-rotate {
-  from {
-    transform: rotate(-20deg);
-  }
-  to {
-    transform: rotate(20deg);
-  }
-}
-
 .gradientAnim {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -147,4 +129,36 @@ html {
   }
 }
 
-/* =============== end of loader classes  ===============*/
+/* =============== our project enter anim  ===============*/
+
+/* Applying the keyframes based on screen size */
+.hero {
+  animation: hero-anim-desktop 1s 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+    forwards;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    animation: hero-anim-mobile 1s 0.5s ease-out forwards;
+  }
+}
+@keyframes hero-anim-desktop {
+  to {
+    height: 384px;
+  }
+}
+@keyframes hero-anim-mobile {
+  100% {
+    height: 240px;
+  }
+}
+.hero-image {
+  animation: hero-image-anim 1s 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+    forwards;
+}
+@keyframes hero-image-anim {
+  to {
+    object-position: top;
+    filter: blur(2px) brightness(25%);
+  }
+}
