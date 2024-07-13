@@ -33,7 +33,7 @@ export default function Card({
           href={`/blogs?category=${category.slug}`}
           className="absolute bottom-3 left-2 rounded-md bg-indigo-950/50 px-2 py-1 text-sm text-gray-300"
         >
-          {catName}
+          @{catName}
         </Link>
       </div>
       <div className="mt-4 flex flex-col gap-4">

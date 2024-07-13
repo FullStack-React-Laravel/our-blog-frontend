@@ -32,7 +32,7 @@ export default function Header() {
       }
     >
       <div
-        className={`flex items-center gap-8 rounded-full py-2.5 transition-all duration-300 ${!scrollY100 ? "bg-indigo-50/5 px-2 backdrop-blur md:px-4" : ""}`}
+        className={`flex items-center gap-2 rounded-full py-2.5 transition-all duration-300 ${!scrollY100 ? "bg-indigo-50/5 px-2 backdrop-blur md:px-4" : ""}`}
       >
         <div className="flex items-center gap-2">
           <MenuBtns

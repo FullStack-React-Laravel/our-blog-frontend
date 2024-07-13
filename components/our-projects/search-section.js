@@ -2,9 +2,9 @@ import {BiSearch} from "react-icons/bi";
 
 export default function SearchSection() {
 	return (
-		<div className="relative">
+		<div className="relative ml-auto text-white">
 			<input
-				className="outline-none focus:outline-indigo-900 rounded-full sectionGra px-4 py-1"
+				className="outline-none focus:outline-indigo-800 rounded-full sectionGra px-4 py-1"
 				placeholder="search ..."
 			/>
 

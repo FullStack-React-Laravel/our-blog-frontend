@@ -1,6 +1,7 @@
 import HeroSection from "@/components/our-projects/hero-section";
 // import NavSection from "@/components/our-projects/nav-section";
 import SearchSection from "@/components/our-projects/search-section";
+import ProjectsSection from "@/components/our-projects/projects-section";
 
 export default function Page() {
   return (
@@ -13,6 +14,8 @@ export default function Page() {
             <SearchSection />
           </div>
         </header>
+
+        <ProjectsSection />
       </section>
     </>
   );
