@@ -9,7 +9,7 @@ export default function UserDropdown({ showUserAdmin }) {
       >
         <div
           className={
-            "ml-auto max-w-sm rounded-lg border border-indigo-50/10 bg-indigo-50/5 px-4 py-6 text-white backdrop-blur"
+            "ml-auto max-w-sm rounded-lg border border-indigo-50/10 bg-[#000436]/60 px-4 py-6 text-white backdrop-blur"
           }
         >
           <div className="flex items-center border-b border-b-indigo-50/10 pb-3">
