@@ -6,7 +6,7 @@ export default function NavItems({ onClick, showNavbar, screen }) {
 
   const navLinks = [
     { link: "/", name: "home" },
-    { link: "/blogs", name: "blog" },
+    { link: "/blogs", name: "blogs" },
     { link: "/comps", name: "components" },
     { link: "/website-themes", name: "themes" },
     { link: "/our-projects", name: "our projects" },

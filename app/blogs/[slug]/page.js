@@ -7,6 +7,15 @@ import Error from "@/ui/error";
 import Image from "next/image";
 import Comments from "@/components/blogs/comments";
 
+export async function generateMetadata({ params: { slug } }) {
+  const blog = await getBlog(slug);
+  const { title, content } = blog.data;
+  return {
+    title,
+    descrption: content,
+  };
+}
+
 export default async function Page({ params: { slug } }) {
   let blog;
   let error = null;
@@ -20,7 +29,7 @@ export default async function Page({ params: { slug } }) {
     return <Error height="min-h-screen" errorMessage={error} />;
   }
   const { title, attachment, created_at, user, tags, content } = blog.data;
-  const date = formatDate(created_at);
+  const createdAt = formatDate(created_at);
 
   return (
     <section className="min-h-screen py-40">
@@ -28,7 +37,7 @@ export default async function Page({ params: { slug } }) {
         <CreatedBy
           textSize="text-base"
           sizeUserImage="size-14"
-          createdAt={date}
+          createdAt={createdAt}
           {...user}
         />
         <h1 className="mt-4 text-3xl text-white md:mt-8 md:text-5xl">

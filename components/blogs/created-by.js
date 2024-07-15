@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { formatDate } from "@/helper/helper-function";
 
 export default function CreatedBy({
   name,
@@ -11,9 +12,7 @@ export default function CreatedBy({
 }) {
   return (
     <div className="flex h-16 items-center gap-4">
-      <div
-        className={`${sizeUserImage} gradientAnim rounded-full p-1`}
-      >
+      <div className={`${sizeUserImage} gradientAnim rounded-full p-1`}>
         <Image
           className="rounded-full"
           src={avatar}

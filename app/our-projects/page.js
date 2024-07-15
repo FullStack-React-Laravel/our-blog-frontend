@@ -3,6 +3,10 @@ import HeroSection from "@/components/our-projects/hero-section";
 import SearchSection from "@/components/our-projects/search-section";
 import ProjectsSection from "@/components/our-projects/projects-section";
 
+export const metadata = {
+  title: "Our Projects",
+};
+
 export default function Page() {
   return (
     <>

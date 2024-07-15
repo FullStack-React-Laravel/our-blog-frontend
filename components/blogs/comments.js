@@ -50,8 +50,8 @@ function Comment({ user, attachment, message, likes, created_at }) {
               <BiSolidQuoteRight className="ml-1 inline align-baseline text-xs" />
             </p>
           </div>
-          <div className="bg-primary-800 mt-4 flex w-fit cursor-pointer items-center gap-2 rounded-xl px-3 py-1 text-sm">
-            <BiSolidLike />
+          <div className="group mt-4 flex w-fit cursor-pointer items-center gap-2 rounded-xl bg-primary-800 px-3 py-1 text-sm">
+            <BiSolidLike className="transition-all duration-300 group-hover:-rotate-12 group-hover:scale-150" />
             {likes}
           </div>
         </div>

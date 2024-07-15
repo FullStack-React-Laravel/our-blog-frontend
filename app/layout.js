@@ -9,7 +9,10 @@ const lato = Lato({
 });
 
 export const metadata = {
-  title: "HackerLife",
+  title: {
+    template: "HackerLife | %s",
+    default: "Welcome To HackerLife",
+  },
   description:
     "welcome to our HackerLife blog where we post every thing about tech...",
 };

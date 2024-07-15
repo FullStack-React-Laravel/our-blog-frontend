@@ -6,7 +6,7 @@ export default function AddComment() {
     e.preventDefault();
   }
   return (
-    <form onSubmit={handleFun} className="rounded-lg p-4">
+    <form onSubmit={handleFun} className="rounded-lg py-4">
       <label
         htmlFor="comment"
         className="mb-4 block text-sm font-medium text-gray-200"
