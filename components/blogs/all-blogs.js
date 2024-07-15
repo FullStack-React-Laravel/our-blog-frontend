@@ -2,12 +2,12 @@ import CreatedBy from "./created-by";
 import Tags from "./tags";
 import Image from "next/image";
 
-import { getAllBlogs } from "@/blogs/blogs-api";
+import { getBlogsData } from "@/blogs/blogs-api";
 import { formatDate } from "@/helper/helper-function";
 import Link from "next/link";
 
 export default async function AllBlogs() {
-  const data = await getAllBlogs();
+  const data = await getBlogsData({});
   const blogs = data?.data;
 
   return (

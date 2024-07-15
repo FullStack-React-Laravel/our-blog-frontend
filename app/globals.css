@@ -148,8 +148,8 @@ html {
   }
 }
 @keyframes hero-anim-mobile {
-  100% {
-    height: 240px;
+  to {
+    height: 320px;
   }
 }
 .hero-image {

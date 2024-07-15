@@ -1,4 +1,4 @@
-import { getLatestBlogs } from "@/blogs/blogs-api";
+import { getBlogsData } from "@/blogs/blogs-api";
 import Error from "@/ui/error";
 import Card from "../blogs/card";
 
@@ -7,7 +7,7 @@ export default async function LatestSection() {
   let error = null;
 
   try {
-    blogs = await getLatestBlogs();
+    blogs = await getBlogsData({ latest: true });
   } catch (err) {
     error = err.message;
   }

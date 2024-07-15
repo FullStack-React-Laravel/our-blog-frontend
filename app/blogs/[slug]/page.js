@@ -1,4 +1,4 @@
-import { getBlog } from "@/blogs/blogs-api";
+import { getBlogsData } from "@/blogs/blogs-api";
 import { formatDate } from "@/helper/helper-function";
 
 import CreatedBy from "@/components/blogs/created-by";
@@ -8,7 +8,7 @@ import Image from "next/image";
 import Comments from "@/components/blogs/comments";
 
 export async function generateMetadata({ params: { slug } }) {
-  const blog = await getBlog(slug);
+  const blog = await getBlogsData({ slug });
   const { title, content } = blog.data;
   return {
     title,
@@ -21,7 +21,7 @@ export default async function Page({ params: { slug } }) {
   let error = null;
 
   try {
-    blog = await getBlog(slug);
+    blog = await getBlogsData({ slug });
   } catch (err) {
     error = err.message;
   }

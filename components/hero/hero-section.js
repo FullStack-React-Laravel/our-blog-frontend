@@ -15,13 +15,11 @@ export default function HeroSection() {
         </XYAnim>
         <XYAnim
           delay={0.3}
-          classes="max-w-96 md:max-w-2xl text-gray-400 md:text-xl mb-10 text-justify"
+          classes="max-w-96 md:max-w-2xl text-gray-400 md:text-xl my-6 md:my-10 text-justify"
         >
-          <p>
-            Here, you&#39;ll find the latest gadget reviews, tech news, how-to
-            guides, problem-solving articles, and more fun things. Our goal is
-            to make tech accessible and exciting for everyone.
-          </p>
+          Here, you&#39;ll find the latest gadget reviews, tech news, how-to
+          guides, problem-solving articles, and more fun things. Our goal is to
+          make tech accessible and exciting for everyone.
         </XYAnim>
         <XYAnim delay={0.6}>
           <Btn url="#latest">See Latest!</Btn>
