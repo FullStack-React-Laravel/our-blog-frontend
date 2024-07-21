@@ -6,7 +6,7 @@ export default function Team() {
   return (
     <section className="py-24" id="team">
       <div className="our-container">
-        <div className="mb-16 text-center text-4xl capitalize text-white md:mb-24 md:text-7xl">
+        <div className="m-auto mb-16 max-w-80 text-center text-4xl capitalize text-white md:mb-24 md:max-w-none md:text-7xl">
           Meet our professional <span className="textG font-bold">team!!</span>
         </div>
 

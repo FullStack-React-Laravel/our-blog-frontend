@@ -10,7 +10,6 @@ export default function HeroSection() {
         className="gradientAnim hero-image absolute inset-0 size-full border-b object-cover object-bottom brightness-25"
         src={OurProjectHeroImage}
         alt="our project hero section image"
-        placeholder="blur"
         priority
       />
       <div className="absolute inset-0 grid place-items-center pt-20">
