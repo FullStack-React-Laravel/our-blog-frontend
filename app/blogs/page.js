@@ -12,7 +12,7 @@ export const metadata = {
   title: "Blogs",
 };
 
-export default function Page({ searchParams }) {
+export default function Page() {
   return (
     <>
       <section className="hero relative grid h-svh place-content-center">
@@ -31,7 +31,9 @@ export default function Page({ searchParams }) {
             what are you <span className="textG">looking for ?</span>
           </XYAnim>
           <XYAnim delay={1.3} classes="m-auto w-4/5">
-            <Search />
+            <Suspense>
+              <Search />
+            </Suspense>
           </XYAnim>
         </div>
       </section>
