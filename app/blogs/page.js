@@ -6,6 +6,8 @@ import Spinner from "@/ui/spinner";
 import Image from "next/image";
 import { Suspense } from "react";
 
+import searchImage from "@/public/images/search-photo.jpg";
+
 export const metadata = {
   title: "Blogs",
 };
@@ -16,10 +18,9 @@ export default function Page({ searchParams }) {
       <section className="hero relative grid h-svh place-content-center">
         <Image
           className="absolute inset-0 size-full object-cover object-center brightness-25"
-          src="/images/search-photo.jpg"
+          src={searchImage}
           alt="blogs hero section image"
-          width={2890}
-          height={2118}
+          placeholder="blur"
           priority
         />
         <div className="relative px-4 pt-12">

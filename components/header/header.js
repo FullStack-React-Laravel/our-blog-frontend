@@ -10,6 +10,8 @@ import MenuBtns from "./menu-btns";
 import UserDropdown from "./user-dropdown";
 import NavItems from "./nav-items";
 
+import logo from "@/public/images/icon.png";
+
 export default function Header() {
   const [showNavbar, setShowNavbar] = useState(false);
   const [showUserAdmin, setShowUserAdmin] = useState(false);
@@ -85,13 +87,7 @@ export default function Header() {
 function HeaderLogo() {
   return (
     <div className="aspect-square w-8 md:w-12">
-      <Image
-        width={512}
-        height={512}
-        alt="logo"
-        src="/images/icon.png"
-        priority
-      />
+      <Image alt="logo" src={logo} priority />
     </div>
   );
 }

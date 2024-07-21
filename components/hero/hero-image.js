@@ -1,14 +1,13 @@
 import Image from "next/image";
 import { Fragment } from "react";
+import hero from "@/public/images/hero-image.jpg";
 
 export default function HeroImage() {
   return (
     <Fragment>
       <Image
-        width={3840}
-        height={2160}
         alt="hero section image"
-        src="/images/hero-image.jpg"
+        src={hero}
         priority
         className="absolute left-0 top-0 h-full w-full object-cover"
       />

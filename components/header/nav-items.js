@@ -10,6 +10,7 @@ export default function NavItems({ onClick, showNavbar, screen }) {
     { link: "/comps", name: "components" },
     { link: "/website-themes", name: "themes" },
     { link: "/our-projects", name: "our projects" },
+    { link: "/#team", name: "our team" },
   ];
 
   const mobileNavItems = navLinks.map(({ link, name }) => {
@@ -50,7 +51,7 @@ export default function NavItems({ onClick, showNavbar, screen }) {
   if (screen === "mobile") {
     return (
       <nav
-        className={`mt-2 block overflow-hidden rounded-lg transition-all duration-300 md:hidden ${showNavbar ? "h-48" : "h-0"}`}
+        className={`mt-2 block overflow-hidden rounded-lg transition-all duration-300 md:hidden ${showNavbar ? "h-56" : "h-0"}`}
       >
         <ul className="flex w-full flex-col gap-2 bg-[#000436]/60 px-4 py-6 backdrop-blur">
           {mobileNavItems}
