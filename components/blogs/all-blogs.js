@@ -5,19 +5,20 @@ import Image from "next/image";
 import { getBlogsData } from "@/blogs/blogs-api";
 import { formatDate } from "@/helper/helper-function";
 import Link from "next/link";
+import NotFound from "../not-found";
 
-export default async function AllBlogs() {
-  const data = await getBlogsData({});
+export default async function AllBlogs({ searchQuery }) {
+  const data = await getBlogsData({ searchQuery });
   const blogs = data?.data;
 
+  if (blogs.length == 0) return <NotFound />;
+
   return (
-    <section className="min-h-screen">
-      <div className="m-auto max-w-3xl px-5 pt-20 text-white">
-        {blogs.map((blog) => (
-          <Blog key={blog.slug} {...blog} />
-        ))}
-      </div>
-    </section>
+    <div className="m-auto min-h-screen max-w-3xl px-5 pt-20 text-white">
+      {blogs.map((blog) => (
+        <Blog key={blog.slug} {...blog} />
+      ))}
+    </div>
   );
 }
 

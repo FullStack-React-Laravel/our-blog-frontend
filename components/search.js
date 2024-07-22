@@ -1,4 +1,5 @@
 "use client";
+
 import useDebounce from "@/hooks/use-debounce";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -10,7 +11,7 @@ export default function Search() {
   const pathname = usePathname();
   const { replace } = useRouter();
   const searchParams = useSearchParams();
-  const debouncedValue = useDebounce(value, 3000);
+  const debouncedValue = useDebounce(value, 2000);
 
   useEffect(() => {
     const params = new URLSearchParams(searchParams);
@@ -27,7 +28,7 @@ export default function Search() {
       <input
         value={value}
         onChange={addQuery}
-        className="sectionGra w-full rounded-full py-3 pl-10 outline-none ring-indigo-500 transition-all duration-300 focus:scale-105 focus:ring-4 md:py-5 md:pl-14 md:text-xl"
+        className="sectionGra w-full rounded-full py-3 pl-10 outline-none ring-indigo-500 transition-all duration-300 focus:ring-4 md:py-5 md:pl-14 md:text-xl"
         placeholder="search ..."
       />
       <BiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-xl md:left-4 md:text-2xl" />

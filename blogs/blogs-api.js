@@ -1,14 +1,25 @@
 const API_URL_Blogs = "https://our-blog-eg-api.vercel.app/posts";
 
-export async function getBlogsData({ latest = false, slug = "" }) {
+export async function getBlogsData({
+  latest = false,
+  slug = "",
+  searchQuery = "",
+}) {
   let url = API_URL_Blogs;
+
   if (latest) url = `${url}/latest`;
-  if (slug) url = `${url}/${slug}`;
+  else if (slug) url = `${url}/${slug}`;
+  else if (searchQuery) url = `${url}/search?query=${searchQuery}`;
 
   try {
     const response = await fetch(url);
+
     if (!response.ok) {
-      throw new Error(`Can't Fetch Data`);
+      if (response.status === 404) {
+        throw new Error("Data not found (404)");
+      } else {
+        throw new Error("Failed to fetch data");
+      }
     }
 
     const data = await response.json();

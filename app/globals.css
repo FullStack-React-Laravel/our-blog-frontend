@@ -162,3 +162,19 @@ html {
     filter: blur(2px) brightness(25%);
   }
 }
+
+@keyframes moveUpRotate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.moveUpRotate {
+  animation: moveUpRotate 4s ease-in-out infinite;
+}
