@@ -1,11 +1,9 @@
-const API_URL_Blogs = "https://our-blog-eg-api.vercel.app/posts";
-
 export async function getBlogsData({
   latest = false,
   slug = "",
   searchQuery = "",
 }) {
-  let url = API_URL_Blogs;
+  let url = process.env.API_URL_Blogs;
 
   if (latest) url = `${url}/latest`;
   else if (slug) url = `${url}/${slug}`;

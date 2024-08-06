@@ -1,6 +1,7 @@
 import { Lato } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header";
+import { HeaderProvider } from "@/context/header-context";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -20,8 +21,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${lato.className} sectionGra select-none`}>
-        <Header />
+      <body className={`${lato.className} sectionGra`}>
+        <HeaderProvider>
+          <Header />
+        </HeaderProvider>
         <main>{children}</main>
       </body>
     </html>

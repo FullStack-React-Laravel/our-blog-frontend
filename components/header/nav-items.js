@@ -1,7 +1,9 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useHeader } from "@/context/header-context";
 
-export default function NavItems({ onClick, showNavbar, screen }) {
+export default function NavItems({ screen }) {
+  const { handleShowNavbar, showNavbar } = useHeader();
   const pathname = usePathname();
 
   const navLinks = [
@@ -20,7 +22,7 @@ export default function NavItems({ onClick, showNavbar, screen }) {
       <li key={name}>
         <Link
           href={link}
-          onClick={() => onClick()}
+          onClick={() => handleShowNavbar()}
           className={`rounded-xl px-2 py-1 capitalize duration-500 ${ativeCurPath ? "sectionGra" : ""}`}
         >
           <span className={`font-bold ${ativeCurPath ? "textG" : ""}`}>
